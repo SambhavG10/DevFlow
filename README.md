@@ -160,7 +160,7 @@ Built using **LangGraph, Node.js, Docker, Redis, React**, and powered by **Googl
 ## Clone Repository
 
 ```bash
-git clone https://github.com/sanjay-dtu/DevFlow.git
+git clone https://github.com/SambhavG10/DevFlow.git
 
 cd DevFlow
 
