@@ -44,7 +44,7 @@ function printBanner() {
   console.log("");
   console.log("╔══════════════════════════════════════════════════════════╗");
   console.log("║                                                          ║");
-  console.log("║      🛠️  CODESENA — Multi-Agent Software Dev System      ║");
+  console.log("║      🛠️  DevFlow — Multi-Agent Software Dev System       ║");
   console.log("║                                                          ║");
   console.log("║      Phase 4: Full Dev Loop — Local LLM Integration      ║");
   console.log("║      By: Sanjay Kumar (DTU)                              ║");

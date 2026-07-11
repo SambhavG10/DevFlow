@@ -79,7 +79,7 @@ async function start() {
   console.log("");
   console.log("╔══════════════════════════════════════════════════════════╗");
   console.log("║                                                          ║");
-  console.log("║    🛠️  CODESENA — Mission Control Server                 ║");
+  console.log("║    🛠️  DevFlow — Mission Control Server                  ║");
   console.log("║    Phase 4: Full Dev Loop — Local LLM Integration        ║");
   console.log("║                                                          ║");
   console.log("╚══════════════════════════════════════════════════════════╝");

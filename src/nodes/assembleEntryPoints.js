@@ -118,7 +118,7 @@ export default app;
  */
 export function assembleFrontendEntry(sandboxId, fileRegistry, blueprint) {
   const pageFiles = fileRegistry.filter(f =>
-    f.path?.includes("frontend/src/pages/") && f.path?.endsWith(".jsx")
+    f.path?.includes("frontend/src/pages/") && (f.path?.endsWith(".jsx") || f.path?.endsWith(".js"))
   );
 
   if (pageFiles.length === 0) {

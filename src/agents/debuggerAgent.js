@@ -32,6 +32,7 @@ RULES:
 - Be SPECIFIC. Not "fix the import" but "change line 5 from 'import X from Y' to 'import { X } from Y'"
 - If the error is a missing dependency, say which package to install
 - If the error is in a different file than expected, identify which file
+- VITE JSX COMPILE ERROR: If Vite/Rollup fails to build because a ".js" file contains invalid HTML/JSX syntax, the fix MUST instruct the Coder to rename the file to end with the ".jsx" extension and update imports accordingly.
 - Read the error message carefully — the line number and file path tell you exactly where to look`;
 
 export async function debuggerAgentNode(state) {

@@ -41,6 +41,9 @@ RULES:
 - Auth: JWT Bearer token. req.headers.authorization?.split(' ')[1]. req.user = decoded.
 - Env vars: process.env.DATABASE_URL, process.env.JWT_SECRET, process.env.PORT
 - .js extension in ALL imports (required for ES modules)
+- IMPORT VERIFICATION: When importing from 'backend/src/middleware/auth.js', check if it uses named exports. For example, auth.js uses NAMED exports (like "export function authenticateToken"), so you MUST use named imports: "import { authenticateToken } from '../middleware/auth.js';" (NEVER a default import).
+- ROUTE PATHS: Since router files are mounted with a path prefix in index.js (e.g. app.use('/api/todos', todoRoutes)), routes inside the router file should be defined on root "/" (e.g. router.get('/')), NOT "/api/todos" (which causes a double path: "/api/todos/api/todos").
+- NO HALLLUCINATED LIBRARIES: Use the raw PostgreSQL connection "pool" from "../config/db.js" (import { pool } from '../config/db.js'). Do NOT import Sequelize, Mongoose, or other ORMs unless they are in package.json.
 - Write COMPLETE files. No TODO, no placeholders.
 - Keep code concise: 60-120 lines target. No excessive comments.`;
 
@@ -56,7 +59,9 @@ OUTPUT FORMAT (strict JSON — single file only):
 RULES:
 - Functional components with hooks (useState, useEffect, useContext)
 - Use Tailwind CSS — NO inline styles, NO CSS modules
+- FILE EXTENSIONS (CRITICAL): Any React component file containing JSX syntax (HTML inside JavaScript, e.g. <div>, <h1>, etc.) MUST end with the ".jsx" extension. Vite compilation will fail if you write JSX code inside a ".js" file.
 - Import api utility: import api from '../utils/api' (already configured with auth)
+- API ENDPOINT QUERY PATHS: The api Axios client is pre-configured with a "/api" base URL. Therefore, when making requests, use paths relative to "/api". For example, use "api.get('/calculations')" or "api.get('/todos')", NOT "api.get('/api/calculations')" (which resolves to "/api/api/calculations").
 - Navigation: import { useNavigate, Link } from 'react-router-dom'
 - ALWAYS include loading state and error state
 - Forms: controlled inputs, onSubmit with e.preventDefault()

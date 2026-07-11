@@ -78,7 +78,7 @@ export default function App() {
         <div className="header-left">
           <div className="logo">
             <span className="logo-mark">//</span>
-            <span className="logo-text">CODESENA</span>
+            <span className="logo-text">DevFlow</span>
           </div>
           <span className="header-divider" />
           <span className="header-label">mission control</span>
@@ -104,10 +104,10 @@ export default function App() {
                 <p className="landing-pre">MULTI-AGENT AI SYSTEM</p>
                 <h1 className="landing-title">
                   Describe it.<br />
-                  Sena builds it.
+                  DevFlow builds it.
                 </h1>
                 <p className="landing-desc">
-                  An autonomous software developer system powered by LangGraph, Docker sandbox environments, and local LLMs. Specify your requirements and watch Codesena plan, write, test, and deploy applications.
+                  An autonomous software developer system powered by LangGraph, Docker sandbox environments, and local LLMs. Specify your requirements and watch DevFlow plan, write, test, and deploy applications.
                 </p>
               </div>
               <div className="landing-right">
